@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="app.js"></script>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,12 +14,18 @@
   </head>
   <body>
     <div class="container">
-      <header>
-        <div class="logo_con">
+       <div class="open"> <img id="open-sidebar-btn" onclick="openSidebar()" src="Asset/Logos/bar_icon.png" alt="">  </div>
+ 
+      <header id="header">
+        
+        <div class="logo_con"> 
+ <li><button id="close-sidebar-btn" onclick="closeSidebar()" aria-label="close sidbar">❌ </button></li>
+</button>
           <img src="./Asset/Logos/header_logo.png" alt="" />
           <h1 class="logo_text">Metabnb</h1>
         </div>
         <nav>
+        
           <a href="">Home</a>
           <a href="">place to stay</a>
           <a href="">NFTs</a>
@@ -32,5 +37,6 @@
        <button class="header_btn">Connect wallet</button>
       </header>
     </div>
+    <script src="app.js"></script>
   </body>
 </html>

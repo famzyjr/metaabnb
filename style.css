@@ -1,51 +1,113 @@
-*{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-background-color: rgba(255, 255, 255, 1);
-font-family: "Red Rose", serif;
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Red Rose", serif;
 }
 
-header{
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-align-items: center;
-padding: 20px;
-text-align: center;
+body {
+  background-color: rgba(255, 255, 255, 1);
 }
 
-.logo_con{
-    display: flex;
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
 }
 
-.logo_text{
-background: linear-gradient(to right, rgba(220, 62, 136, 1),rgba(184, 64, 174, 1),rgba(132, 63, 232, 1));
-background-clip: text;
-color: transparent;
--webkit-text-stroke-width: 1px;
-font-weight: 400;
--webkit-text-stroke-color: transparent;
-box-shadow: rgba(96, 96, 96, 0.15);
+.logo_con {
+  display: flex;
+}
+
+.logo_text {
+  background: linear-gradient(
+    to right,
+    rgba(220, 62, 136, 1),
+    rgba(184, 64, 174, 1),
+    rgba(132, 63, 232, 1)
+  );
+  background-clip: text;
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  font-weight: 400;
+  -webkit-text-stroke-color: transparent;
+  box-shadow: rgba(96, 96, 96, 0.15);
 }
 
 nav {
-display: flex;
-gap: 20px;
+  display: flex;
+  gap: 20px;
 }
-nav a{
-text-decoration: none;
-font-weight: 400;
-font-size: 20px;
+nav a {
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 20px;
 }
 
-.header_btn{
-border: none;
-background: linear-gradient(rgba(160, 34, 121, 1));
-border-radius: 10px;
-padding: 10px;
-color: #fff;
-font-weight: 400;
-font-size: 16px;
+.header_btn {
+  border: none;
+  background: linear-gradient(rgba(160, 34, 121, 1));
+  border-radius: 10px;
+  padding: 10px;
+  color: #fff;
+  font-weight: 400;
+  font-size: 16px;
 }
+li {
+  list-style: none;
+}
+#close-sidebar-btn {
+  display: none;
+}
+
+.open{
+display: flex;
+justify-content: flex-end;
+}
+
+#open-sidebar-btn {
+display: none;
+}
+
+@media (max-width: 767px) {
+  header {
+    flex-direction: column;
+    background: linear-gradient(135deg, #5f2c82, #1e0033);
+    width: 300px;
+    position: fixed;
+    top: 0;
+    right: -870px;  
+    height: 100vh;
+    transition: right 300ms ease-out;
+  }
+
+  header.active {
+    right: 0;   /* Slide in */
+  }
+#open-sidebar-btn{
+padding: 20px;
+}
+  #open-sidebar-btn,
+  #close-sidebar-btn {
+    display: block;
+  }
+  #close-sidebar-btn{
+  background: none;
+  border: none;
+  position: relative;
+  left: -30px;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  nav a {
+    color: #fff;
+  }
+}
+
