@@ -8,13 +8,13 @@ const ModalCloseBtn = document.getElementById('modal_close_btn');
 const modalInput = document.getElementById('modal_input');
 const modalSendBtn =  document.getElementById('modal_btn')
 
-openBtn.addEventListener("click", () => {
-  sidebar.classList.add("active");
-});
+// openBtn.addEventListener("click", () => {
+//   sidebar.classList.add("active");
+// });
 
-closeBtn.addEventListener("click", () => {
-  sidebar.classList.remove("active");
-});
+// closeBtn.addEventListener("click", () => {
+//   sidebar.classList.remove("active");
+// });
 
 walletBtn.addEventListener('click', ()=>{
  Modal.style.display = 'block';
@@ -42,3 +42,38 @@ modalSendBtn.onclick =()=> modalAlert()
 
 
 
+
+
+  // <div style="display: flex;">
+  //         <nav>
+  //           <a href="">Home</a>
+  //           <a href="">Place to stay </a>
+  //           <a href="">NFTS</a>
+  //           <a href="">Community</a>
+  //           <a href=""></a>
+  //         </nav>
+  //           <button  id="wallet_btn">Connect wallet</button>
+  //        </div>
+  //  <div id="modaloverlay">
+  //      <div class="modal_con">
+  //       <div  id="modal">
+  //      <div>
+  //        <div class="modal_context_con"> 
+  //         <div id="modal_close_btn"  aria-label="close sidbar">❌</div>
+  //           <div class="modal_context">
+  //             <input type="text" id="modal_input" placeholder="Input Your Adress">
+  //             <button id="modal_btn" >Send!</button>
+  //           </div>
+  //        </div>
+  //      </div>
+  //     </div>
+  //      </div>
+  //      </div>
+
+  //  <div style="display: flex">
+  //           <div>
+  //             <img style="margin-top: 20px;" src="./Asset/Logos/header_logo.png" alt="" />
+              
+  //           </div>
+  //              <h1 class="logo_text">Metabnb</h1>
+  //              </div>

@@ -14,33 +14,27 @@
   </head>
   <body>
     <div class="container">
-       <div class="open"> <img id="open-sidebar-btn" onclick="" src="./Asset/Logos/bar_icon.png" alt="">  </div>
- 
-      <header id="header">
-        
-        <div class="logo_con"> 
- <li><button id="close-sidebar-btn"  aria-label="close sidbar">❌ </button></li>
-</button>
-          <img src="./Asset/Logos/header_logo.png" alt="" />
-          <h1 class="logo_text">Metabnb</h1>
-        </div>
-        <nav>
-        
-          <a href="">Home</a>
-          <a href="">place to stay</a>
-          <a href="">NFTs</a>
-          <a href="">Community</a>
-        </nav>
-       <!-- <div class="wallet_btn_con">
-         <button ><span>Connect Wallet</span></button>
-       </div> -->
-       <button  id="wallet_btn">Connect wallet</button>
-      </header>
-       <div id="modaloverlay">
+     <header>
+     <div class="header_section">
+       <div style="display: flex">
+            <div style="display: flex; align-items: center; ">
+              <img style="margin-top: 20px;" src="./Asset/Logos/header_logo.png" alt="" />
+                 <h1 class="logo_text" >Metabnb</h1>
+            </div>
+               </div>
+              <nav>
+                <li><a href="">Home</a></li>
+                <li><a href="">Home</a></li>
+                <li><a href="">Home</a></li>
+                <li><a href="">Home</a></li>
+              </nav>
+              <div style="margin-top: 20px;"> <button  id="wallet_btn">Connect wallet</button></div>
+              <img class="bar_icon" src="/Asset/Logos/bar_icon.png" alt="">
+     </div>
+     <div id="modaloverlay">
        <div class="modal_con">
         <div  id="modal">
        <div>
-          
          <div class="modal_context_con"> 
           <div id="modal_close_btn"  aria-label="close sidbar">❌</div>
             <div class="modal_context">
@@ -49,12 +43,14 @@
             </div>
          </div>
        </div>
-        
       </div>
        </div>
        </div>
-       
+     </header>
     </div>
+    
+    
     <script src="app.js"></script>
   </body>
+  
 </html>
