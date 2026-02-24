@@ -28,9 +28,11 @@ nav{
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   gap: 20px;
   margin-top: 20px;
 }
+
 
 .bar_icon{
 display: none;
@@ -63,9 +65,13 @@ li a{
   color: #fff;
   font-weight: 400;
   font-size: 16px;
+  cursor: pointer;
 }
 li {
   list-style: none;
+}
+.vv{
+display: flex;
 }
 #close-sidebar-btn {
   display: none;
@@ -76,9 +82,9 @@ li {
   justify-content: flex-end;
 }
 
-#open-sidebar-btn {
+/* #open-sidebar-btn {
   display: none;
-}
+} */
 #modaloverlay {
   background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
@@ -140,6 +146,64 @@ li {
   -webkit-text-stroke-color: transparent;
   box-shadow: rgba(96, 96, 96, 0.15);
 }
+#g{
+ display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 60%;  
+}
+@media (max-width: 857px){
+  .bar_icon{
+    display: block;
+    z-index: 10;
+  }
+   
+  #close-sidebar-btn{
+  display: block;
+  }
 
-@media (max-width: 995px) {
+  .close-sidebar-btn_con{
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  right: 15px;
+top: 20px;
+  }
+  
+  .wallets_btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #g{
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100px;
+  width: 90%;          
+  max-width: 400px;    
+  left: 50%;           
+  transform: translateX(-50%);
+
+  background: rgba(179, 12, 115, 0.932);
+  padding: 15px;
+  backdrop-filter: blur(15px);
+  border-radius: 15px;  
+  }
+  nav{
+  display: flex; 
+   flex-direction: column;
+   /* margin-top: 200px; */
+  }
+
+  .wallet_btn_con{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  
+  li a{
+  color: #fff;
+  cursor: pointer;
+  }
 }

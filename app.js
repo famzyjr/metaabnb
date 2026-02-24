@@ -1,4 +1,4 @@
-const sidebar = document.querySelector("header");
+const navbar = document.getElementById("g");
 const openBtn = document.getElementById("open-sidebar-btn");
 const closeBtn = document.getElementById("close-sidebar-btn");
 const walletBtn  = document.getElementById('wallet_btn')
@@ -8,13 +8,13 @@ const ModalCloseBtn = document.getElementById('modal_close_btn');
 const modalInput = document.getElementById('modal_input');
 const modalSendBtn =  document.getElementById('modal_btn')
 
-// openBtn.addEventListener("click", () => {
-//   sidebar.classList.add("active");
-// });
+openBtn.addEventListener("click", () => {
+  navbar.style.display = 'block';
+});
 
-// closeBtn.addEventListener("click", () => {
-//   sidebar.classList.remove("active");
-// });
+closeBtn.addEventListener("click", () => {
+    navbar.style.display = 'none';
+});
 
 walletBtn.addEventListener('click', ()=>{
  Modal.style.display = 'block';
