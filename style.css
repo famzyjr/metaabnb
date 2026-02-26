@@ -81,9 +81,7 @@ li {
   justify-content: flex-end;
 }
 
-/* #open-sidebar-btn {
-  display: none;
-} */
+
 #modaloverlay {
   background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
@@ -168,7 +166,7 @@ li {
   font-size: 56px;
 }
 
-.hero_sub_text {
+.heroText{
   font-weight: 400;
   font-size: 24px;
   line-height: 35px;
@@ -220,8 +218,14 @@ input {
   cursor: pointer;
 }
 
+.hero_input {
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
 @media (max-width: 1075px) {
-  .hero_section{
+  .hero_section {
     display: flex;
     flex-direction: column;
   }
@@ -284,30 +288,29 @@ input {
 }
 
 @media (max-width: 691px) {
- .right_hero_img {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-}
-.hero_section{
-display: flex;
-align-items: center;
-}
+  .right_hero_img {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+  .hero_section {
+    display: flex;
+    align-items: center;
+  }
 
-.left_hero_img {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 10px;
- 
-}
-.hero_imgs {
-  display: flex;
-  flex-direction: column;
-  gap: 90px;
-}
+  .left_hero_img {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .hero_imgs {
+    display: flex;
+    flex-direction: column;
+    gap: 90px;
+  }
 
-   .hero_header {
+  .hero_header {
     font-weight: 400;
     font-size: 28px;
     text-align: center;
@@ -344,18 +347,18 @@ align-items: center;
 }
 
 @media (max-width: 470px) {
-.right_hero_img {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.left_hero_img {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 10px;
-}  
- .input_con {
+  .right_hero_img {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .left_hero_img {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .input_con {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -369,5 +372,4 @@ align-items: center;
     height: 40px;
     border-radius: 5px;
   }
-
 }
