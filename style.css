@@ -1,12 +1,13 @@
 * {
-  font-family: "Red Rose", serif;
+ 
+   margin: 0;
+  padding: 0;
 }
 body {
   background-color: rgba(255, 255, 255, 1);
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  height: 100vh;
+  box-sizing: border-box; 
+  font-family: "Red Rose", serif;
+  min-height: 200vh;
 }
 header {
   position: relative;
@@ -81,13 +82,21 @@ li {
   justify-content: flex-end;
 }
 
-
 #modaloverlay {
-  background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
   inset: 0;
-  z-index: 9;
-  display: none;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+#modaloverlay.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
 }
 
 .modal_con {
@@ -224,10 +233,13 @@ input {
   outline: none;
 }
 
+
+
 @media (max-width: 1075px) {
   .hero_section {
     display: flex;
     flex-direction: column;
+    gap: 20px;
   }
 }
 

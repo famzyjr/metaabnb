@@ -17,11 +17,11 @@ closeBtn.addEventListener("click", () => {
 });
 
 walletBtn.addEventListener('click', ()=>{
- Modal.style.display = 'block';
+ Modal.classList.add('active')
 })
 
 ModalCloseBtn.addEventListener('click',()=>{
-  Modal.style.display = 'none';
+  Modal.classList.remove("active");
 })
 
 
