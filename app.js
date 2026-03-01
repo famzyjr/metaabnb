@@ -123,7 +123,7 @@ const htmlOutput = AdventureLocation.map((items)=>{
 return  `<div class="d">
         <div class="adventurecard">
         <div class="adventureImgContainer">
-         <img class="adventure_img" src=${items.imgs} alt="">
+         <img class="adventure_img" loading="lazy" src=${items.imgs} alt="">
       <div><img class="heartImg" src="Asset/Logos/heart.png" alt=""></div>
       </div>
       

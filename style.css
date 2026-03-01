@@ -274,6 +274,11 @@ display: none;
   }
 }
 
+img{
+background-color: red;
+
+}
+
 .adventure{
 margin-top: 40px;
 }
