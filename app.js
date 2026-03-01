@@ -181,7 +181,7 @@ const htmlOutput = (data) => {
 
 htmlOutput(AdventureLocation)
 
-SearchInput.addEventListener('input', () => {
+LocationBtn.addEventListener('click', () => {
   const searchValue = SearchInput.value.trim();
 
   if (searchValue !== '') {
