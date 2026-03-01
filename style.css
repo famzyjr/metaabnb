@@ -226,7 +226,7 @@ input {
   cursor: pointer;
 }
 
-.hero_input {
+#hero_input {
   background: transparent;
   border: none;
   outline: none;

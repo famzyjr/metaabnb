@@ -8,6 +8,10 @@ const ModalCloseBtn = document.getElementById('modal_close_btn');
 const modalInput = document.getElementById('modal_input');
 const modalSendBtn =  document.getElementById('modal_btn')
 const AdventureOutput = document.getElementById('adventureOutput');
+const LocationBtn   =  document.getElementById('locationBtn');
+const SearchInput   = document.getElementById('hero_input');
+const B   = document.getElementById('b');
+
 const AdventureLocation = [
   {
   id: 1,
@@ -74,7 +78,7 @@ stars: './Logos/star.png',
   },
   {
   id: 8,
- Location: 'Lagos',
+ Location: 'Kano',
 Amount:'1MBT per night',
 distance:'2345km away',
 availability:'available for 2weeks stay',
@@ -117,37 +121,92 @@ if(inputValue.length >= 10){
 
 modalSendBtn.onclick =()=> modalAlert()
 
-
-const htmlOutput = AdventureLocation.map((items)=>{
- console.log(items.Amount);
-return  `<div class="d">
-        <div class="adventurecard">
-        <div class="adventureImgContainer">
-         <img class="adventure_img" loading="lazy" src=${items.imgs} alt="">
-      <div><img class="heartImg" src="Asset/Logos/heart.png" alt=""></div>
-      </div>
+// const htmlOutput =()=>{
+// const output = AdventureLocation.map((items)=>{
+// return  `<div class="d">
+//         <div class="adventurecard">
+//         <div class="adventureImgContainer">
+//          <img class="adventure_img" loading="lazy" src=${items.imgs} alt="">
+//       <div><img class="heartImg" src="Asset/Logos/heart.png" alt=""></div>
+//       </div>
       
-       <div class="adventureContext">
-        <div class="left_context">
-             <p class="">${items.Location}</p>
-        <p class="second_rightText">${items.distance}</p>
-        <img src="Asset/Logos/star.png" alt="">
+//        <div class="adventureContext">
+//         <div class="left_context">
+//              <p class="">${items.Location}</p>
+//         <p class="second_rightText">${items.distance}</p>
+//         <img src="Asset/Logos/star.png" alt="">
+//         </div>
+//         <div class="right_context">
+//         <p class="first_leftText">${items.Amount}</p>
+//         <p class="second_leftText">${items.availability}</p>
+//         </div>
+//        </div>
+//       </div>
+//       </div>`
+// })
+// AdventureOutput.innerHTML = output.join('')
+// }
+
+//  htmlOutput()
+
+const htmlOutput = (data) => {
+
+  const output = data.map((items) => {
+    return `
+      <div class="d">
+        <div class="adventurecard">
+          <div class="adventureImgContainer">
+            <img class="adventure_img" loading="lazy" src="${items.imgs}" alt="">
+            <div><img class="heartImg" src="Asset/Logos/heart.png" alt=""></div>
+          </div>
+
+          <div class="adventureContext">
+            <div class="left_context">
+              <p>${items.Location}</p>
+              <p class="second_rightText">${items.distance}</p>
+              <img src="Asset/Logos/star.png" alt="">
+            </div>
+            <div class="right_context">
+              <p class="first_leftText">${items.Amount}</p>
+              <p class="second_leftText">${items.availability}</p>
+            </div>
+          </div>
         </div>
-        <div class="right_context">
-        <p class="first_leftText">${items.Amount}</p>
-        <p class="second_leftText">${items.availability}</p>
-        </div>
-       </div>
       </div>
-      </div>`
+    `;
+  });
 
-})
+  AdventureOutput.innerHTML = output.join('');
+};
 
-AdventureOutput.innerHTML = htmlOutput.join('');
+htmlOutput(AdventureLocation)
+
+SearchInput.addEventListener('input', () => {
+  const searchValue = SearchInput.value.trim();
+
+  if (searchValue !== '') {
+
+    let searchLocation = AdventureLocation.filter(function (data) {
+      return data.Location.toLowerCase().includes(searchValue.toLowerCase());
+    });
+
+    console.log(searchLocation);
+
+    if (searchLocation.length > 0) {
+      // We found results
+      console.log("Found:", searchLocation);
+      htmlOutput(searchLocation)
+      // You can now display them
+    } else {
+      alert("No location found!");
+    }
+
+    SearchInput.value = '';
+
+  } else {
+    alert('Please search the category or title!');
+  }
+});
 
 
 
-
-
-
-// console.log(htmlOutput);
