@@ -235,7 +235,6 @@ input {
 .banner_con {
   margin-top: 200px;
   background: #a02279;
-  /* width: 100%; */
   padding: 20px;
 }
 
@@ -262,7 +261,6 @@ display: none;
 .banner_group {
   display: flex;
   align-items: center;
-  /* justify-content: ; */
   gap: 5em;
   animation: spin 5s infinite linear;
   padding-right: 1em;
@@ -275,6 +273,89 @@ display: none;
     translate: -100%;
   }
 }
+
+.adventure{
+margin-top: 40px;
+}
+#adventureOutput{
+display: flex;
+flex-wrap: wrap;
+gap: 20px;
+justify-content: center;
+}
+.adventure h2{
+text-align: center;
+font-weight: 700;
+font-size: 48px;
+}
+
+.cards{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin-left: 20px;
+}
+.adventurecard{
+border: 1px solid #D7D7D7;
+width: 242px;
+height: 372px;
+justify-content: center;
+border-radius: 15px;
+padding: 40px;
+}
+.adventure_img{
+width: 260px;
+height: 265px;
+border-radius: 15px;
+}
+.d{
+/* display: flex; */
+justify-content: center;
+align-items: center;
+gap: 20px;
+margin-top: 20px;
+}
+.adventureContext{
+display: flex;
+gap: 4em;
+justify-content: center;
+flex-direction:row;
+margin-top: 30px;
+}
+.right_context,.left_context{
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+.first_leftText{
+color: #434343;
+font-weight: 700;
+font-size: 12px;
+width: 88px;
+}
+
+.second_leftText{
+width: 148px;
+font-weight: 400;
+color: #434343;
+font-size: 12px;
+}
+
+.locationtext{
+  width: 67px;
+  font-size: 12px;
+  color: #434343;
+  font-weight: 400;
+}
+
+.second_rightText{
+width: 83px;
+font-size: 12px;
+font-weight: 400;
+color: #434343;
+}
+
 @media (max-width: 1075px) {
   .hero_section {
     display: flex;
@@ -324,7 +405,6 @@ display: none;
   nav {
     display: flex;
     flex-direction: column;
-    /* margin-top: 200px; */
   }
 
   .wallet_btn_con {
@@ -338,11 +418,12 @@ display: none;
     cursor: pointer;
   }
 }
-/* @media (max-width: 697px) {
-.bannerIcons img{
-width: 100%;
+@media (max-width: 447px) {
+.banner_con {
+  margin-top: 50px;
 }
-} */
+
+}
 
 @media (max-width: 691px) {
   .right_hero_img {
