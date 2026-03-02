@@ -412,39 +412,54 @@ flex-direction: column;
 gap: 50px;
 }
 
-
-footer{
-background-color: #1D1D1E;
-height: 322px;
-color: #F7F7F7;
- display: flex;
-gap: 50px;
-justify-content: space-around;
-align-items: center;
+footer {
+  background-color: #1D1D1E;
+  color: #F7F7F7;
+  padding: 60px 80px;
 }
 
-.left_footerContent{
-display: flex;
-flex-direction: column;
-gap: 80px;
+.footer_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
-.footer_socials{
-display: flex;
-gap: 20px;
+
+.left_footerContent {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
 }
-.right_footerContent{
-display: flex;
-gap: 40px;
+
+.footer_socials {
+  display: flex;
+  gap: 20px;
 }
-:hover.first_para{
+
+.right_footerContent {
+  display: flex;
+  gap: 100px;
+}
+
+.footer_column {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer_column h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer_column p {
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.footer_column p:hover {
   text-decoration: underline;
 }
-:hover.second_para{
-  text-decoration: underline;
-}
-:hover.third_para{
-  text-decoration: underline;
-}
+
 @media (max-width: 1075px) {
   .hero_section {
     display: flex;
@@ -538,8 +553,6 @@ margin-left: 130px;
 }
 
 
-
-
 @media (max-width: 691px) {
   .right_hero_img {
     display: flex;
@@ -624,5 +637,66 @@ margin-left: 130px;
     max-width: 400px;
     height: 40px;
     border-radius: 5px;
+  }
+}
+
+@media (max-width: 1024px) {
+.footer_container {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
+
+  footer {
+    padding: 50px 40px;
+  }
+
+  .right_footerContent {
+    gap: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .footer_container {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .right_footerContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 columns */
+    gap: 50px 40px;
+  }
+
+  .footer_column {
+    align-items: flex-start;
+  }
+
+  /* Make About Us span full width */
+  .footer_column:nth-child(3) {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 480px) {
+/* .footer_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  } */
+
+  .footer_socials {
+    gap: 15px;
+  }
+
+  .footer_column h3 {
+    font-size: 16px;
+  }
+
+  .footer_column p {
+    font-size: 13px;
   }
 }
