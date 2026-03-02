@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place to stay</title>
+    <link rel="stylesheet" href="location.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Red+Rose:wght@300..700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <div class="header_section">
+            <div style="display: flex">
+                <div style="display: flex; align-items: center; z-index: 10;">
+                    <img style="margin-top: 20px" src="./Asset/Logos/header_logo.png" alt="" />
+                    <h1 class="logo_text">Metabnb</h1>
+                </div>
+            </div>
+
+            <div id="g">
+                <div class="">
+                    <div class="close-sidebar-btn_con">
+                        <div id="close-sidebar-btn">❌</div>
+                    </div>
+                    <nav>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="Locations.html">Place to Stay</a></li>
+                        <li><a href="">NFTs</a></li>
+                        <li><a href="">Community</a></li>
+                    </nav>
+                </div>
+                <div style="margin-top: 20px" class=" wallet_btn_con">
+                    <button id="wallet_btn">Connect wallet</button>
+                </div>
+            </div>
+
+            <img class="bar_icon" id="open-sidebar-btn" src="Asset/Logos/bar_icon.png" alt="" />
+        </div>
+
+
+        </div>
+        <div id="modaloverlay">
+            <div class="modal_con">
+                <div id="modal">
+                    <div>
+                        <div class="modal_context_con">
+                            <div id="modal_close_btn" aria-label="close sidbar">❌</div>
+                            <div class="modal_context">
+                                <input type="text" id="modal_input" placeholder="Input Your Adress" />
+                                <button id="modal_btn">Connect to Wallet!</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section>
+      <ul>
+        <li><a  data-id="Resturant" class="ancor_link" href="" >Resturant</a></li>
+        <li><a  class="ancor_link" data-id="Cottage" href="">Cottage</a></li>
+        <li><a  class="ancor_link" data-id="Castle" href="">Castle</a></li>
+        <li><a  class="ancor_link" data-id="Fantanst city" href="">Fantanst city</a></li>
+        <li><a  class="ancor_link" data-id="Beach"  href="">Beach</a></li>
+        <li><a  class="ancor_link" data-id="Carbins"  href="">Carbins</a></li>
+        <li><a  class="ancor_link" data-id="Off-grid"  href="">off-grid</a></li>
+        <li><a  class="ancor_link" data-id="Farm"  href="">Farm</a></li>
+      </ul>
+    </section>
+    <section class="adventure">
+        <div id="PlaceToStay">
+        </div>
+    </section>
+     <footer>
+  <div class="footer_container">
+
+    <div class="left_footerContent">
+      <div>
+        <img src="Asset/Logos/logo2.png" alt="">
+      </div>
+
+      <div class="footer_socials">
+        <img src="Asset/Logos/facebook.png" alt="">
+        <img src="Asset/Logos/instagram.png" alt="">
+        <img src="Asset/Logos/twitter.png" alt="">
+      </div>
+    </div>
+
+    <div class="right_footerContent">
+
+      <div class="footer_column">
+        <h3>Community</h3>
+        <p>NFTs</p>
+        <p>Tokens</p>
+        <p>Landlords</p>
+        <p>Discord</p>
+      </div>
+
+      <div class="footer_column">
+        <h3>Places</h3>
+        <p>Castle</p>
+        <p>Farms</p>
+        <p>Beach</p>
+        <p>Learn more</p>
+      </div>
+
+      <div class="footer_column">
+        <h3>About us</h3>
+        <p>Road map</p>
+        <p>Creators</p>
+        <p>Career</p>
+        <p>Contact us</p>
+      </div>
+
+    </div>
+
+  </div>
+</footer> 
+    <script src="app.js"></script>
+    <script src="loaction.js"></script>
+</body>
+
+</html>

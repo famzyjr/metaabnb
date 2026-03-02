@@ -36,7 +36,7 @@ nav {
 .bar_icon {
   display: none;
 }
-li a {
+nav li a {
   text-decoration: none;
   color: #434343;
 }
@@ -53,7 +53,7 @@ li a {
   font-weight: 400;
   -webkit-text-stroke-color: transparent;
   box-shadow: rgba(96, 96, 96, 0.15);
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 #wallet_btn {
@@ -68,6 +68,9 @@ li a {
 }
 li {
   list-style: none;
+}
+nav li a:hover{
+text-decoration:underline;
 }
 .vv {
   display: flex;
@@ -667,7 +670,7 @@ margin-left: 130px;
 
   .right_footerContent {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* 2 columns */
+    grid-template-columns: 1fr 1fr; 
     gap: 50px 40px;
   }
 
@@ -675,18 +678,13 @@ margin-left: 130px;
     align-items: flex-start;
   }
 
-  /* Make About Us span full width */
+  
   .footer_column:nth-child(3) {
     grid-column: span 2;
   }
 }
 
 @media (max-width: 480px) {
-/* .footer_container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  } */
 
   .footer_socials {
     gap: 15px;
