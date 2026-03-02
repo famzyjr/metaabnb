@@ -305,30 +305,30 @@ const htmlOutput = (data) => {
     `;
   });
 
-// AdventureOutput.innerHTML = output.join(' ');
+AdventureOutput.innerHTML = output.join(' ');
 };
 
 htmlOutput(AdventureLocation)
 
-// LocationBtn.addEventListener('click', () => {
-//   const searchValue = SearchInput.value.trim();
+LocationBtn.addEventListener('click', () => {
+  const searchValue = SearchInput.value.trim();
 
-//   if (searchValue !== '') {
+  if (searchValue !== '') {
 
-//     let searchLocation = AdventureLocation.filter(function (data) {
-//       return data.Location.toLowerCase().includes(searchValue.toLowerCase());
-//     });
+    let searchLocation = AdventureLocation.filter(function (data) {
+      return data.Location.toLowerCase().includes(searchValue.toLowerCase());
+    });
 
-//     console.log(searchLocation);
+    console.log(searchLocation);
 
-//     if (searchLocation.length > 0) {
-//       console.log("Found:", searchLocation);
-//       htmlOutput(searchLocation)
-//     } else {
-//       alert("No location found!");
-//     }
+    if (searchLocation.length > 0) {
+      console.log("Found:", searchLocation);
+      htmlOutput(searchLocation)
+    } else {
+      alert("No location found!");
+    }
 
-//     SearchInput.value = '';
+    SearchInput.value = '';
 
   } else {
     alert('Please search the category or title!');
