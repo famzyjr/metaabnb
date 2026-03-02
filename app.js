@@ -10,12 +10,11 @@ const modalSendBtn =  document.getElementById('modal_btn')
 const AdventureOutput = document.getElementById('adventureOutput');
 const LocationBtn   =  document.getElementById('locationBtn');
 const SearchInput   = document.getElementById('hero_input');
-const B   = document.getElementById('b');
 
 const AdventureLocation = [
   {
   id: 1,
- Location: 'Lagos',
+ Location:'Lagos',
 Amount:'1MBT per night',
 distance:'2345km away',
 availability:'available for 2weeks stay',
